@@ -1,11 +1,10 @@
 # The data of tmax have to be in estational cicles 
 # 12 values per gridbox
-fun.hottest.season <- function(tmax, pr){
+fun.hottest.season <- function(tmax){
     idx.lon <- list()
     idx.lat <- list()
     for(i in 1:dim(tmax$Data)[which(attr(tmax$Data, "dimensions") == "lat")]){
         tmax.lat <- subsetDimension(tmax, dimension="lat", indices=i)
-        print(i)
         for(j in 1:dim(tmax$Data)[which(attr(tmax$Data, "dimensions") == "lon")]){
             tmax.lon <- subsetDimension(tmax.lat, dimension="lon", indices=j)
             aux.lon <- tmax.lon
