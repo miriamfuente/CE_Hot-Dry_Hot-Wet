@@ -11,3 +11,4 @@ dependencies:
   - r-visualizer
   - r-irkernel
   - r-geoprocessor
+  - jupyterlab
