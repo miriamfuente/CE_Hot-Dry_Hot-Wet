@@ -9,6 +9,7 @@ dependencies:
   - r-loader
   - r-transformer
   - r-visualizer
+  - r-downscaler
   - r-irkernel
   - r-geoprocessor
   - jupyterlab
