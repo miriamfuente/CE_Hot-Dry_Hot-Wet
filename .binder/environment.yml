@@ -7,7 +7,7 @@ dependencies:
   - r-base
   - r-ggplot2
   - r-loader
-  - r-transformer
+  - r-transformer>=2.2.3
   - r-visualizer
   - r-downscaler
   - r-irkernel
