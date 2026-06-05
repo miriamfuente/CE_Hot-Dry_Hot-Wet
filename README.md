@@ -13,20 +13,13 @@ In this repository, you will find a comprehensive guide on obtaining compound ev
 
 ### Data & Configuration
 - **data/** - Directory containing input climate data
-- **data_inventory.csv** - Inventory of available datasets
 - **functions/** - Helper functions used across the analysis
-- **save.data/** - Output directory for processed results
 
 ## Workflow
 
-1. Start with `load.data.and.bias.adjustment.ipynb` to prepare your climate data
-2. Run `hot.dry.hot.wet.compound.events.ipynb` (or use the R script) to identify and quantify compound events
-3. Results will be saved in the `save.data/` directory
-
-## Requirements
-
-- Python 3.x (for Jupyter notebooks)
-- R 3.x+ (for R scripts)
-- Climate data in the appropriate format (see data_inventory.csv)
+1. Start with `load.data.and.bias.adjustment.ipynb` to load the climate data and apply bias correction to it
+2. Run `hot.dry.hot.wet.compound.events.ipynb` (or use the R script) to characterize compound events (with all metrics shown in the article)
 
 For more details, refer to the individual notebooks and scripts.
+
+This repository was created to reproduce the results obtained in our study. It has been configured to run directly from GitHub using the codespaces option.
