@@ -103,6 +103,9 @@ fun.categories <- function(cat){
         list.c4.lat[[i]] <- redim(do.call(bindGrid, c(list.c4.lon, list(dimension = "lon", skip.temporal.check = FALSE))), drop = TRUE)
         list.c5.lat[[i]] <- redim(do.call(bindGrid, c(list.c5.lon, list(dimension = "lon", skip.temporal.check = FALSE))), drop = TRUE)
     }
+    mask <- climatology(cat)
+    mask$Data[!is.na(mask$Data)] <- 1
+
     list.c0 <- redim(do.call(bindGrid, c(list.c0.lat, list(dimension = "lat", skip.temporal.check = FALSE))), drop = TRUE)
     list.c1 <- redim(do.call(bindGrid, c(list.c1.lat, list(dimension = "lat", skip.temporal.check = FALSE))), drop = TRUE)
     list.c2 <- redim(do.call(bindGrid, c(list.c2.lat, list(dimension = "lat", skip.temporal.check = FALSE))), drop = TRUE)
@@ -110,6 +113,13 @@ fun.categories <- function(cat){
     list.c4 <- redim(do.call(bindGrid, c(list.c4.lat, list(dimension = "lat", skip.temporal.check = FALSE))), drop = TRUE)
     list.c5 <- redim(do.call(bindGrid, c(list.c5.lat, list(dimension = "lat", skip.temporal.check = FALSE))), drop = TRUE)
 
-    return(list(c0 = list.c0, c1 = list.c1, c2 = list.c2, c3 = list.c3, c4 = list.c4, c5 = list.c5))
+    cat0 <- gridArithmetics(list.c0, mask, operator = "*")
+    cat1 <- gridArithmetics(list.c1, mask, operator = "*")
+    cat2 <- gridArithmetics(list.c2, mask, operator = "*")
+    cat3 <- gridArithmetics(list.c3, mask, operator = "*")
+    cat4 <- gridArithmetics(list.c4, mask, operator = "*")
+    cat5 <- gridArithmetics(list.c5, mask, operator = "*")
+
+    return(list(c0 = cat0, c1 = cat1, c2 = cat2, c3 = cat3, c4 = cat4, c5 = cat5))
 
 }

@@ -12,6 +12,5 @@ def.dur <- function(data, racha, categoria) {
   duration.events <- len.valid[idx.val]
   num.rachas <- length(duration.events)
   median.duration <- median(duration.events)
-  mean.duration <- mean(duration.events)
-  return(c(num.rachas, median.duration, mean.duration))
+  return(c(num.rachas, median.duration))
 }

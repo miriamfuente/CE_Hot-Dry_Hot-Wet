@@ -17,7 +17,6 @@ fun.intensity <- function(pr.obs, tmax.obs, tmax.daily) {
     end_date <- NULL
 
     for (i in 1:dim(tmax.obs$Data)[which(attr(tmax.obs$Data, "dimensions") == "lat")]) {
-        print(paste("i= ", i))
         t90.lat <- subsetDimension(t90, dimension="lat", indices=i)
         t95.lat <- subsetDimension(t95, dimension="lat", indices=i)
 
