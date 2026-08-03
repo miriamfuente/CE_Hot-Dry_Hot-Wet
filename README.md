@@ -1,6 +1,6 @@
 # Hot-Dry & Hot-Wet Compound Events
 
-This repository provides a comprehensive guide for computing hot-dry and hot-wet compound climate events. It accompanies the results presented in our study and walks the user through every step — from raw data loading and bias correction to the final compound event characterization metrics.
+This repository provides a comprehensive guide for computing hot-dry and hot-wet compound climate events. It accompanies the results presented in our study and walks the user through every step, from raw data loading and bias correction to the final compound event characterization metrics.
 
 The repository is configured to run entirely from GitHub using **GitHub Codespaces**, requiring no local installation.
 
