@@ -4,9 +4,12 @@ channels:
   - nodefaults
 
 dependencies:
-  - r-base==4.3.*
-  - r-climate4r
+  - r-base
   - r-ggplot2
+  - r-loader
+  - r-transformer==2.5.5
+  - r-visualizer
+  - r-downscaler
   - r-irkernel
   - r-geoprocessor
   - jupyterlab
