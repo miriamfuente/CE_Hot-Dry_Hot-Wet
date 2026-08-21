@@ -13,4 +13,3 @@ dependencies:
   - r-irkernel
   - r-geoprocessor
   - jupyterlab
-  - r-remotes
